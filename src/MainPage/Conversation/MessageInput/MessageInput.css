@@ -1,0 +1,13 @@
+.message-input-container {
+    display:flex;
+}
+
+.message-input {
+    display: flex;
+    min-height: 60vh;
+}
+
+.message-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}

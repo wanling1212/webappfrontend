@@ -1,0 +1,6 @@
+.conversation-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 1px solid #000; /* 添加黑色實線邊框 */
+}

@@ -1,0 +1,7 @@
+.schedule-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%; /* 設定元素寬度為 80% */
+    border: 1px solid #000; /* 添加黑色實線邊框 */
+}

@@ -1,0 +1,5 @@
+.mainpage-container {
+    display: flex; /* 啟用 Flexbox */
+    justify-content: space-between; /* 子元素左右分散排列 */
+    width: 100%; /* 設定元素寬度為 100% */
+}
