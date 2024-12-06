@@ -1,7 +1,30 @@
 .schedule-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+}
+
+.schedule-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.schedule-content {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 50%; /* 設定元素寬度為 80% */
-    border: 1px solid #000; /* 添加黑色實線邊框 */
+    height: 300px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+}
+
+.schedule-placeholder {
+    color: #666;
+    font-size: 1.2em;
+    text-align: center;
 }

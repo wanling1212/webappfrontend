@@ -1,5 +1,43 @@
-.mainpage-container {
-    display: flex; /* 啟用 Flexbox */
-    justify-content: space-between; /* 子元素左右分散排列 */
-    width: 100%; /* 設定元素寬度為 100% */
-}
+.mainpage {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+  }
+  
+  .mainpage-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .mainpage-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .conversation-section, .schedule-section {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .conversation-section {
+    max-width: 40%;
+  }
+  
+  .schedule-section {
+    flex: 2;
+  }
+  
+  @media (max-width: 768px) {
+    .mainpage-container {
+      flex-direction: column;
+    }
+  
+    .conversation-section, .schedule-section {
+      max-width: 100%;
+    }
+  }
+  
