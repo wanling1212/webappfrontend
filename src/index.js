@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Mainpage from './MainPage/Mainpage.js';
 import reportWebVitals from './reportWebVitals';
+import { ScheduleProvider } from './Context.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Mainpage />
+    <ScheduleProvider>
+      <Mainpage />
+    </ScheduleProvider>
   </React.StrictMode>
 );
 
