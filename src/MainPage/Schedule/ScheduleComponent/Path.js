@@ -1,11 +1,10 @@
 import React from "react";
+import "./Path.css";
 
 const Path = ({ travelMode, from, to, time, notes }) => {
   return (
     <div className="path">
-      <p>
-        <strong>Travel Mode:</strong> {travelMode}
-      </p>
+      <p className='pathTitle'>{travelMode}</p>
       <p>
         <strong>From:</strong> {from} <br />
         <strong>To:</strong> {to}

@@ -1,0 +1,17 @@
+.location {
+    width: 30%;
+    flex: 0 0 auto; /* can not be squeze or grow */
+    background: rgba(168, 222, 255, 0.405);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.nameTitle {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}

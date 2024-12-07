@@ -3,7 +3,6 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
     margin: auto;
 }
 
@@ -16,11 +15,22 @@
 
 .schedule-content {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
     border: 2px dashed #ccc;
     border-radius: 10px;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+}
+
+.schedule-content::-webkit-scrollbar {
+    height: 6px;
+}
+
+.schedule-content::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
 }
 
 .schedule-placeholder {

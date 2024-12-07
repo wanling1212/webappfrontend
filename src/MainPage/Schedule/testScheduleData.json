@@ -1,0 +1,83 @@
+[
+    {
+      "name": "艾菲爾鐵塔",
+      "address": "法國巴黎第七區安納托爾·法蘭斯大道5號，戰神廣場",
+      "description": "一座用鋼鐵建造的格子塔，是法國文化的全球標誌性建築。",
+      "visit_duration": 90,
+      "travel_time_to_prev": 0,
+      "travel_time_to_next": 15,
+      "reviews": [
+        "從塔頂看巴黎的景色令人驚嘆！",
+        "拍照的絕佳地點。",
+        "排隊時間雖然很長，但非常值得！"
+      ],
+      "rating": 4.7,
+      "rating_count": 12456,
+      "ticket_price": 25,
+      "tags": ["地標", "旅遊", "象徵"],
+      "url": "https://www.toureiffel.paris/zh",
+      "location": {
+        "latitude": 48.8584,
+        "longitude": 2.2945
+      }
+    },
+    {
+      "travel_mode": "地鐵",
+      "from_location": "艾菲爾鐵塔",
+      "to_location": "羅浮宮博物館",
+      "time": 20,
+      "notes": "搭乘6號線至比哈凱姆站，然後換乘1號線至皇家宮殿-羅浮宮站。"
+    },
+    {
+      "name": "羅浮宮博物館",
+      "address": "法國巴黎第一区里沃利街",
+      "description": "世界上最大的藝術博物館，也是巴黎的一個歷史古蹟。",
+      "visit_duration": 180,
+      "travel_time_to_prev": 20,
+      "travel_time_to_next": 10,
+      "reviews": [
+        "蒙娜麗莎比想像中小，但依然令人驚豔！",
+        "收藏豐富，建議留一整天參觀。",
+        "建築和展覽都非常精彩。"
+      ],
+      "rating": 4.8,
+      "rating_count": 15834,
+      "ticket_price": 17,
+      "tags": ["藝術", "博物館", "歷史"],
+      "url": "https://www.louvre.fr/zh",
+      "location": {
+        "latitude": 48.8606,
+        "longitude": 2.3376
+      }
+    },
+    {
+      "travel_mode": "步行",
+      "from_location": "羅浮宮博物館",
+      "to_location": "巴黎聖母院",
+      "time": 15,
+      "notes": "沿著塞納河散步，風景優美。"
+    },
+    {
+      "name": "巴黎聖母院",
+      "address": "法國巴黎第4區聖母院廣場6號",
+      "description": "一座中世紀的天主教大教堂，被認為是法國哥特式建築的巔峰之作。",
+      "visit_duration": 60,
+      "travel_time_to_prev": 15,
+      "travel_time_to_next": 0,
+      "reviews": [
+        "建築和彩色玻璃非常漂亮！",
+        "正在修復中，但仍然令人印象深刻。",
+        "歷史愛好者必訪之地。"
+      ],
+      "rating": 4.6,
+      "rating_count": 10243,
+      "ticket_price": 0,
+      "tags": ["教堂", "歷史", "建築"],
+      "url": "https://www.notredamedeparis.fr/",
+      "location": {
+        "latitude": 48.853,
+        "longitude": 2.3499
+      }
+    }
+  ]
+  

@@ -1,16 +1,22 @@
 import React from "react";
+import "./Location.css";
 
 const Location = ({ name, address, description, visitDuration, rating, tags }) => {
-  return (
+return (
     <div className="location">
-      <h3>{name}</h3>
-      <p><strong>Address:</strong> {address}</p>
-      <p><strong>Description:</strong> {description}</p>
-      <p><strong>Visit Duration:</strong> {visitDuration} mins</p>
-      <p><strong>Rating:</strong> {rating} ⭐</p>
-      <p><strong>Tags:</strong> {tags.join(", ")}</p>
+        <h3 className='nameTitle'>{name}</h3>
+        <p><strong>Address:</strong></p>
+        <p>{address}</p>
+        <p><strong>Description:</strong></p>
+        <p>{description}</p>
+        <p><strong>Visit Duration:</strong></p>
+        <p>{visitDuration} mins</p>
+        <p><strong>Rating:</strong></p>
+        <p>{rating} ⭐</p>
+        <p><strong>Tags:</strong></p>
+        <p>{tags.join(", ")}</p>
     </div>
-  );
+);
 };
 
 export default Location;

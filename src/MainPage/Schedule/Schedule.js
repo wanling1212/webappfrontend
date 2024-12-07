@@ -1,11 +1,13 @@
 import React from 'react';
 import './Schedule.css';
-import { ScheduleContext } from '../../Context.js';
+// import { ScheduleContext } from '../../Context.js';
 import Location from './ScheduleComponent/Location';
 import Path from './ScheduleComponent/Path';
+import testScheduleData from './testScheduleData.json';
 
 const Schedule = () => {
-    const { scheduleData } = React.useContext(ScheduleContext);
+    // const { scheduleData } = React.useContext(ScheduleContext);
+    const scheduleData = testScheduleData;
 
     return (
         <div className="schedule-container">
@@ -39,10 +41,10 @@ const Schedule = () => {
                     />
                     );
                 } else {
-                    return null; // 如果資料格式不符合預期，則不渲染
+                    return null; // invalid object
                 }
                 })}
-                <p className="schedule-placeholder">Your schedule will appear here once ready...</p>
+                {/* <p className="schedule-placeholder">Your schedule will appear here once ready...</p> */}
             </div>
         </div>
     );
