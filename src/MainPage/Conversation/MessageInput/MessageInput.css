@@ -1,10 +1,12 @@
 .message-input-container {
     display:flex;
+    flex-direction: row;
 }
 
 .message-input {
     display: flex;
     min-height: 60vh;
+    width: 100%;
 }
 
 .message-input:focus {

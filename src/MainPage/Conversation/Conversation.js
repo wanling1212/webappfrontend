@@ -3,7 +3,7 @@ import './Conversation.css';
 
 function Conversation() {
     return (
-        <div className="conversation-container">
+        <div className="conversation-container">    
             <h2>Conversation</h2>
             <MessageInput />
         </div>
