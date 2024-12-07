@@ -5,19 +5,29 @@ function MessageInput() {
     const [message, setMessage] = useState('');
 
     const handleSubmit = () => {
-        console.log(message);
-        setMessage('');
+        if (message.trim() !== '') {
+            console.log(message);
+            setMessage('');
+        }
+    };
+
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleSubmit();
+        }
     };
 
     return (
         <div className="message-input-container">
-            <input className='message-input'
+            <input
+                className="message-input"
                 type="text"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+                onKeyPress={handleKeyPress}
                 placeholder="Enter your message..."
             />
-            <button onClick={handleSubmit}>Send</button>
+            <button className="message-send-button" onClick={handleSubmit}>Send</button>
         </div>
     );
 }

@@ -1,6 +1,28 @@
 .conversation-container {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    border: 1px solid #000; /* 添加黑色實線邊框 */
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.conversation-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.conversation-content {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.conversation-placeholder {
+    color: #666;
+    text-align: center;
 }

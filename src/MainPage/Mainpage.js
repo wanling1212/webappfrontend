@@ -4,13 +4,18 @@ import "./Mainpage.css";
 
 function Mainpage() {
   return (
-    <div>
-      <h1>Mainpage</h1>
+    <div className="mainpage">
+      <header className="mainpage-header">
+        <h1>Your Personal Travel Planner</h1>
+      </header>
       <div className="mainpage-container">
-        <Conversation />
-        <Schedule />
+        <div className="conversation-section">
+          <Conversation />
+        </div>
+        <div className="schedule-section">
+          <Schedule />
+        </div>
       </div>
-        
     </div>
   );
 }
