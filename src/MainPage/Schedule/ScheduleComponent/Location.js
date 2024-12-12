@@ -14,7 +14,7 @@ return (
         <p><strong>Rating:</strong></p>
         <p>{rating} ⭐</p>
         <p><strong>Tags:</strong></p>
-        <p>{tags.join(", ")}</p>
+        <p>{tags && tags.length > 0 ? tags.join(", ") : "No tags available"}</p>
     </div>
 );
 };

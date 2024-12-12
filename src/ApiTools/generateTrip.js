@@ -10,14 +10,10 @@ async function GenerateTrip(start_location, end_location, user_input, scheduleDa
         start: "2024-12-11",
         end: "2024-12-11",
       },
-      travel_plan: scheduleData, // 從 Context 傳遞的資料
-      user_input: user_input,
-    }
+      travel_plan: scheduleData},// 從 Context 傳遞的資料
+    user_input: user_input
   };
 
-  // 在發送請求前輸出 body
-  console.log('Request Body:', JSON.stringify(requestBody, null, 2));
-  
   try {
     const response = await fetch(url + uri, {
       method: 'POST',
@@ -31,7 +27,8 @@ async function GenerateTrip(start_location, end_location, user_input, scheduleDa
 
     const data = await response.json();
     alert('Trip generated successfully!');
-    return data;
+    
+    return data['generated_trip'];
 
   } catch (error) {
     console.error('Error during API request:', error);

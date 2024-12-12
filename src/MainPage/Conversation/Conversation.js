@@ -20,26 +20,29 @@ function Conversation() {
     };
 
     const handleSubmit = async () => {
+        console.log("start submitting...");
+
         // 更新第一個 travel_plan 的 name 為起點名稱
         const updatedSchedule = [...scheduleData];
         updatedSchedule[0].name = inputs.start;
-        
+
         // 更新最後一個 travel_plan 的 name 為終點名稱
         updatedSchedule[updatedSchedule.length - 1].name = inputs.end;
-
-
     
         // 使用 Context 更新 ScheduleData
-        console.log("Updated Schedule Data:", updatedSchedule[0].name);
         setSharedData(updatedSchedule);
     
         // 將更新後的 ScheduleData 傳遞給 API
         try {
             const result = await GenerateTrip(inputs.start, inputs.end, inputs.description, updatedSchedule);
             console.log("Generated Trip Data:", result);
+            setSharedData(result);
+            console.log("Updated Schedule Data:", JSON.stringify(result));
+            
         } catch (error) {
             console.error("Error in generating trip:", error);
         }
+        
     };
     
 

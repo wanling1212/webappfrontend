@@ -1,13 +1,13 @@
 import React from 'react';
 import './Schedule.css';
-// import { ScheduleContext } from '../../Context.js';
+import { ScheduleContext } from '../../Context.js';
 import Location from './ScheduleComponent/Location';
 import Path from './ScheduleComponent/Path';
-import testScheduleData from './testScheduleData.json';
+// import testScheduleData from './testScheduleData.json';
 
 const Schedule = () => {
-    // const { scheduleData } = React.useContext(ScheduleContext);
-    const scheduleData = testScheduleData;
+    const { scheduleData } = React.useContext(ScheduleContext);
+    // const scheduleData = testScheduleData;
 
     return (
         <div className="schedule-container">
