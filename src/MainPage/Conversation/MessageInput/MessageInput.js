@@ -1,19 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './MessageInput.css';
 
-function MessageInput() {
-    const [message, setMessage] = useState('');
-
-    const handleSubmit = () => {
-        if (message.trim() !== '') {
-            console.log(message);
-            setMessage('');
-        }
-    };
-
+function MessageInput({ value, onChange, placeholder }) {
     const handleKeyPress = (e) => {
-        if (e.key === 'Enter') {
-            handleSubmit();
+        if (e.key === 'Enter' && value.trim() !== '') {
+            console.log(value); // 或者觸發父元件的送出邏輯
+            onChange(''); // 清空輸入框
         }
     };
 
@@ -22,12 +14,11 @@ function MessageInput() {
             <input
                 className="message-input"
                 type="text"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Enter your message..."
+                placeholder={placeholder || "Enter your message..."}
             />
-            <button className="message-send-button" onClick={handleSubmit}>Send</button>
         </div>
     );
 }

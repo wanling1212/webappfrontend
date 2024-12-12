@@ -27,3 +27,20 @@
     color: #666;
     text-align: center;
 }
+
+.conversation-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.conversation-input {
+    margin-top: 20px;
+}
+
+.conversation-input label {
+    font-weight: bold;
+}
+.conversation-input input {
+    flex-grow: 1;
+}

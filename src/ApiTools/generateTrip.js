@@ -1,71 +1,42 @@
 const url = 'https://triplan-api.vercel.app/';
 const uri = 'generate_trip';
 
-async function GenerateTrip(start_date, end_date, user_input) {
-    let response = await fetch(url + uri, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({
-            "trip": {
-              "title": "string",
-              "description": "string",
-              "range": {
-                "start": start_date,
-                "end": end_date
-              },
-              "travel_plan": [
-                {
-                  "name": "",
-                  "address": "",
-                  "description": "",
-                  "visit_duration": 0,
-                  "travel_time_to_prev": 0,
-                  "travel_time_to_next": 0,
-                  "reviews": [
-                    "string"
-                  ],
-                  "rating": 0,
-                  "rating_count": 0,
-                  "ticket_price": 0,
-                  "tags": [
-                    "string"
-                  ],
-                  "url": "",
-                  "location": {
-                    "latitude": 0,
-                    "longitude": 0
-                  }
-                },
-                {
-                    "name": "",
-                    "address": "",
-                    "description": "",
-                    "visit_duration": 0,
-                    "travel_time_to_prev": 0,
-                    "travel_time_to_next": 0,
-                    "reviews": [
-                      "string"
-                    ],
-                    "rating": 0,
-                    "rating_count": 0,
-                    "ticket_price": 0,
-                    "tags": [
-                      "string"
-                    ],
-                    "url": "",
-                    "location": {
-                      "latitude": 0,
-                      "longitude": 0
-                    }
-                  }
-              ]
-            },
-            "user_input": user_input
-        })
+async function GenerateTrip(start_location, end_location, user_input, scheduleData) {
+  const requestBody = {
+    trip: {
+      title: "Sample Trip",
+      description: "A sample trip to NTU and Taipei.",
+      range: {
+        start: "2024-12-11",
+        end: "2024-12-11",
+      },
+      travel_plan: scheduleData, // 從 Context 傳遞的資料
+      user_input: user_input,
+    }
+  };
+
+  // 在發送請求前輸出 body
+  console.log('Request Body:', JSON.stringify(requestBody, null, 2));
+  
+  try {
+    const response = await fetch(url + uri, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(requestBody),
     });
-    return await response.json();
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    alert('Trip generated successfully!');
+    return data;
+
+  } catch (error) {
+    console.error('Error during API request:', error);
+    throw error;
+  }
 }
 
-GenerateTrip('2024-12-07', '2024-12-07', 'test_input').then(data => console.log(data));
-
-// export default GenerateTrip;
+export { GenerateTrip };
