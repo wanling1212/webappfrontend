@@ -8,12 +8,12 @@ function Mainpage() {
       <header className="mainpage-header">
         <h1>Your Personal Travel Planner</h1>
       </header>
-      <div className="mainpage-container">
-        <div className="conversation-section">
-          <Conversation />
-        </div>
+      <div className="mainpage-body">
         <div className="schedule-section">
           <Schedule />
+        </div>
+        <div className="conversation-section">
+          <Conversation />
         </div>
       </div>
     </div>

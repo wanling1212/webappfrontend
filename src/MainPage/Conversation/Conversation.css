@@ -1,46 +1,46 @@
 .conversation-container {
-    background: #fff;
+    width: 100%; /* 確保等寬 */
+    box-sizing: border-box; /* 包括 padding 在內的寬度計算 */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px #0000001a;
-    max-width: 600px;
-    margin: auto;
-}
-
-.conversation-title {
-    text-align: center;
-    color: #333;
-    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .conversation-content {
-    height: 300px;
-    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     padding: 10px;
-    border: 2px dashed #ccc;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    
+    background-color: #eef;
 }
 
-.conversation-placeholder {
-    color: #666;
-    text-align: center;
-}
-
-.conversation-container {
+.conversation-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
-.conversation-input {
-    margin-top: 20px;
+.message-item {
+    background-color: #e6f7ff;
+    border: 1px solid #b3d8ff;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px 0;
 }
 
-.conversation-input label {
-    font-weight: bold;
+.submit-button {
+    width: 100px;
+    align-self: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.conversation-input input {
-    flex-grow: 1;
+
+.submit-button:hover {
+    background-color: #0056b3;
 }

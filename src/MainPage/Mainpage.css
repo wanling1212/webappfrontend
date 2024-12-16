@@ -1,43 +1,51 @@
 .mainpage {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f0f2f5;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* 讓主結構垂直排列 */
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f9f9f9, #e9ecef); /* 漸變背景 */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mainpage-header {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.mainpage-body {
+  display: flex;
+  flex-direction: column; /* 讓區塊垂直排列 */
+  gap: 20px;
+  width: 100%;
+}
+
+.schedule-section {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.conversation-section {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 手機響應式 */
+@media (max-width: 768px) {
+  .mainpage-body {
+    gap: 10px;
   }
-  
-  .mainpage-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .mainpage-container {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .conversation-section, .schedule-section {
-    flex: 1;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .conversation-section {
-    max-width: 40%;
-  }
-  
-  .schedule-section {
-    flex: 2;
-  }
-  
-  @media (max-width: 768px) {
-    .mainpage-container {
-      flex-direction: column;
-    }
-  
-    .conversation-section, .schedule-section {
-      max-width: 100%;
-    }
-  }
-  
+}
