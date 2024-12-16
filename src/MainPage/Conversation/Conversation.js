@@ -22,13 +22,15 @@ function Conversation() {
     const handleSubmit = async () => {
         const { description, start, end } = inputs;
 
-        // 添加用戶輸入的訊息到歷史訊息區域
-        setMessages((prevMessages) => [
-            ...prevMessages,
-            `行程描述: ${description}`,
-            `起點: ${start}`,
-            `終點: ${end}`,
-        ]);
+        // 將新的輸入打包成單一卡片格式
+        const newMessage = {
+            description: description,
+            start: start,
+            end: end
+        };
+
+        // 新增到歷史訊息區域
+        setMessages((prevMessages) => [...prevMessages, newMessage]);
 
         // 更新行程資料
         const updatedSchedule = [...scheduleData];
@@ -49,15 +51,22 @@ function Conversation() {
     return (
         <div className="conversation-container">
             <h2 className="conversation-title">Conversation</h2>
+            {/* 歷史訊息統一展示 */}
             <div className="conversation-content">
                 {messages.length > 0 ? (
                     messages.map((msg, index) => (
-                        <p key={index} className="message-item">{msg}</p>
+                        <div key={index} className="message-card">
+                            <p><strong>行程描述:</strong> {msg.description}</p>
+                            <p><strong>起點:</strong> {msg.start}</p>
+                            <p><strong>終點:</strong> {msg.end}</p>
+                        </div>
                     ))
                 ) : (
                     <p className="conversation-placeholder">Your messages will appear here...</p>
                 )}
             </div>
+
+            {/* 輸入表單 */}
             <div className="conversation-form">
                 <div className="conversation-input">
                     <label>行程描述</label>

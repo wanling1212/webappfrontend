@@ -6,7 +6,7 @@ function Mainpage() {
   return (
     <div className="mainpage">
       <header className="mainpage-header">
-        <h1>Your Personal Travel Planner</h1>
+        {/* <h1>Your Personal Travel Planner</h1> */}
       </header>
       <div className="mainpage-body">
         <div className="schedule-section">

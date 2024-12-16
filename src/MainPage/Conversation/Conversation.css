@@ -1,46 +1,69 @@
 .conversation-container {
-    width: 100%; /* 確保等寬 */
-    box-sizing: border-box; /* 包括 padding 在內的寬度計算 */
+    background: #fff;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.conversation-title {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .conversation-content {
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
+
+.message-card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: #eef;
+    color: #333;
+    line-height: 1.5;
+}
+
+.message-card p {
+    margin: 5px 0;
 }
 
 .conversation-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.message-item {
-    background-color: #e6f7ff;
-    border: 1px solid #b3d8ff;
+.conversation-input input,
+.conversation-input textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 8px;
-    margin: 5px 0;
+    font-size: 1rem;
+    background-color: #f9f9f9;
 }
 
 .submit-button {
-    width: 100px;
     align-self: center;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
+    padding: 10px 20px;
+    background-color: #556b8e;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-    background-color: #0056b3;
+    background-color: #445677;
 }
