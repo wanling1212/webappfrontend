@@ -67,3 +67,11 @@
 .submit-button:hover {
     background-color: #445677;
 }
+
+.loading-indicator {
+    text-align: center;
+    color: #556b8e;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}

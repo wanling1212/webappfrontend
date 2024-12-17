@@ -13,7 +13,8 @@ function Conversation() {
         end: ""
     });
 
-    const [messages, setMessages] = useState([]); // 用於儲存歷史訊息
+    const [messages, setMessages] = useState([]);
+    const [loading, setLoading] = useState(false); // 新增 loading 狀態
 
     const handleInputChange = (field, value) => {
         setInputs((prev) => ({ ...prev, [field]: value }));
@@ -21,37 +22,29 @@ function Conversation() {
 
     const handleSubmit = async () => {
         const { description, start, end } = inputs;
+        setLoading(true); // 設定為正在生成
 
-        // 將新的輸入打包成單一卡片格式
-        const newMessage = {
-            description: description,
-            start: start,
-            end: end
-        };
-
-        // 新增到歷史訊息區域
+        const newMessage = { description, start, end };
         setMessages((prevMessages) => [...prevMessages, newMessage]);
 
-        // 更新行程資料
-        const updatedSchedule = [...scheduleData];
-        updatedSchedule[0].name = start;
-        updatedSchedule[updatedSchedule.length - 1].name = end;
-
-        setSharedData(updatedSchedule);
-
         try {
+            const updatedSchedule = [...scheduleData];
+            updatedSchedule[0].name = start;
+            updatedSchedule[updatedSchedule.length - 1].name = end;
+
             const result = await GenerateTrip(start, end, description, updatedSchedule);
             setSharedData(result);
             console.log("Generated Trip Data:", result);
         } catch (error) {
             console.error("Error in generating trip:", error);
+        } finally {
+            setLoading(false); // 無論成功或失敗，結束 loading 狀態
         }
     };
 
     return (
         <div className="conversation-container">
             <h2 className="conversation-title">Conversation</h2>
-            {/* 歷史訊息統一展示 */}
             <div className="conversation-content">
                 {messages.length > 0 ? (
                     messages.map((msg, index) => (
@@ -66,7 +59,6 @@ function Conversation() {
                 )}
             </div>
 
-            {/* 輸入表單 */}
             <div className="conversation-form">
                 <div className="conversation-input">
                     <label>行程描述</label>
@@ -92,7 +84,10 @@ function Conversation() {
                         placeholder="輸入終點..."
                     />
                 </div>
-                <button className="submit-button" onClick={handleSubmit}>送出</button>
+                <button className="submit-button" onClick={handleSubmit} disabled={loading}>
+                    {loading ? "正在生成..." : "送出"}
+                </button>
+                {loading && <p className="loading-indicator">正在生成行程，請稍候...</p>}
             </div>
         </div>
     );
