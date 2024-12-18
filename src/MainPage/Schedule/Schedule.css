@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    /* overflow-x: auto; 允許橫向滾動 */
+    overflow-x: auto; /* 允許橫向滾動 */
   }
   
   .schedule-content {

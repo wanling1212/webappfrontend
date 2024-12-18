@@ -55,6 +55,7 @@ const Schedule = () => {
                 <p>Time Slot: {item.time_slot}</p>
               </div>
             ) : item.travel_mode ? (
+              console.log(item),
               <Path {...item} />
             ) : (
               <Location {...item} />
