@@ -1,17 +1,14 @@
-.path{
-    width: 20%;
-    flex: 0 0 auto; /* can not be squeze or grow */
-    background: rgb(254, 221, 182);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: auto;
+.path {
+    background: transparent; /* 移除背景顏色 */
+    padding: 0; /* 移除內邊距 */
+    margin: 0; /* 移除外邊距 */
+    box-shadow: none; /* 移除陰影 */
 }
 
 .pathTitle {
     text-align: center;
     font-size: 1.5em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #333;
     font-weight: bold;
 }

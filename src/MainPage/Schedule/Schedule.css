@@ -1,40 +1,89 @@
 .schedule-container {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: auto;
-}
-
-.schedule-title {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.schedule-content {
     display: flex;
-    overflow-x: auto;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .schedule-content {
+    display: flex;
+    flex-direction: row;
     gap: 20px;
-    padding: 20px;
-    border: 2px dashed #ccc;
+    overflow-x: auto; /* 允許橫向滾動 */
+    scroll-snap-type: x mandatory; /* 強制滑動時對齊卡片 */
+    padding: 10px; /* 增加內邊距，防止超出邊界 */
+    scroll-padding: 10px; /* 保證左右卡片不會被裁切 */
+  }
+  
+  .schedule-item {
+    position: relative;
+    background: #ffffff;
     border-radius: 10px;
-    scrollbar-width: thin;
-    -webkit-overflow-scrolling: touch;
-}
-
-.schedule-content::-webkit-scrollbar {
-    height: 6px;
-}
-
-.schedule-content::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 3px;
-}
-
-.schedule-placeholder {
-    color: #666;
-    font-size: 1.2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    min-width: 280px; /* 統一卡片寬度 */
+    flex: 0 0 auto; /* 防止壓縮 */
+    scroll-snap-align: start; /* 滑動時對齊卡片 */
+  }
+  
+  .empty-spot {
     text-align: center;
-}
+    border: 2px dashed #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    color: #666;
+    background: #f0f4f8;
+  }
+  
+  .schedule-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .schedule-actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .schedule-actions button:hover {
+    background-color: #0056b3;
+  }
+  
+  .submit-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #218838;
+  }
+  
+
+  .delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #ff4d4f;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .delete-button:hover {
+    color: #d11a1c;
+  }
+
+  
