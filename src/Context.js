@@ -26,6 +26,11 @@ export const ScheduleProvider = ({ children }) => {
       "location": null
     },
     {
+      "time_slot": "morning",
+      "estimate_start_time": null,
+      "estimate_end_time": "12:00:00"
+    },
+    {
       "time_slot": "afternoon",
       "estimate_start_time": null,
       "estimate_end_time": "12:00:00"
