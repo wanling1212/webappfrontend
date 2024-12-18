@@ -7,7 +7,7 @@ export const ScheduleContext = createContext();
 export const ScheduleProvider = ({ children }) => {
   const initialTravelPlan = [
     {
-      "name": "NTU",
+      "name": null,
       "address": null,
       "place_id": null,
       "time_slot": null,
@@ -31,7 +31,7 @@ export const ScheduleProvider = ({ children }) => {
       "estimate_end_time": "12:00:00"
     },
     {
-      "name": "台北車站",
+      "name": null,
       "address": null,
       "place_id": null,
       "time_slot": null,
