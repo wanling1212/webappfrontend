@@ -9,12 +9,12 @@ const Path = ({ travelMode, from, to, time, notes }) => {
     <div className="path">
       <p className="pathTitle">{travelMode}</p>
       <p>
-        <strong>From:</strong>{" "}
+        <strong>From:</strong>{}
         <a href={googleMapsUrl(from)} target="_blank" rel="noopener noreferrer">
           {from}
         </a>
         <br />
-        <strong>To:</strong>{" "}
+        <strong>To:</strong>{}
         <a href={googleMapsUrl(to)} target="_blank" rel="noopener noreferrer">
           {to}
         </a>
