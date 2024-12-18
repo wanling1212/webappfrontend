@@ -3,14 +3,14 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    overflow-x: scroll;
+    /* overflow-x: auto; 允許橫向滾動 */
   }
   
   .schedule-content {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    overflow-x: auto; /* 允許橫向滾動 */
+    overflow-x: auto;
     scroll-snap-type: x mandatory; /* 強制滑動時對齊卡片 */
     padding: 10px; /* 增加內邊距，防止超出邊界 */
     scroll-padding: 10px; /* 保證左右卡片不會被裁切 */
