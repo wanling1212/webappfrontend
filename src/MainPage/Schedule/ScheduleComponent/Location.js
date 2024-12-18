@@ -9,8 +9,8 @@ return (
         <p>{address}</p>
         <p><strong>Description:</strong></p>
         <p>{description}</p>
-        <p><strong>Visit Duration:</strong></p>
-        <p>{visitDuration} mins</p>
+        {/* <p><strong>Visit Duration:</strong></p>
+        <p>{visitDuration} mins</p> */}
         <p><strong>Rating:</strong></p>
         <p>{rating} ⭐</p>
         <p><strong>Tags:</strong></p>
